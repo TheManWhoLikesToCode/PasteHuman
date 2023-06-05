@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Typing Simulator",
+  "version": "1.0",
+  "description": "Simulates human typing with adjustable speed and randomness.",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
