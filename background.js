@@ -1,38 +1,21 @@
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-      chrome.declarativeContent.onPageChanged.addRules([{
-        conditions: [new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'www.example.com'}, // set your desired host here
-        })],
-        actions: [new chrome.declarativeContent.ShowPageAction()]
-      }]);
-    });
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: "emulateTyping",
+    title: "Emulate typing",
+    contexts: ["editable"],
   });
-  
-  chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      let inputText = request.inputText;
-      let wpm = request.wpm;
-      let randomness = request.randomness;
-  
-      // convert WPM to characters per second
-      let cps = wpm * 5 / 60;
-  
-      let index = 0;
-      let interval = setInterval(() => {
-        if (index < inputText.length) {
-          window.document.activeElement.value += inputText.charAt(index);
-          index++;
-  
-          // modify the interval with randomness
-          let randomFactor = Math.random() * 2 * randomness - randomness;
-          let time = (1 / cps) * (1 + randomFactor) * 1000;
-          clearInterval(interval);
-          interval = setInterval(type, time);
-        } else {
-          clearInterval(interval);
-        }
-      }, (1 / cps) * 1000);
-    }
-  );
-  
+
+  chrome.contextMenus.create({
+    id: "stopTyping",
+    title: "Stop typing",
+    contexts: ["editable"],
+  });
+});
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "emulateTyping") {
+    chrome.tabs.sendMessage(tab.id, { action: "emulateTyping" });
+  } else if (info.menuItemId === "stopTyping") {
+    chrome.tabs.sendMessage(tab.id, { action: "stopTyping" });
+  }
+});

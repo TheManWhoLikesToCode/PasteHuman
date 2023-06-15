@@ -1,0 +1,13 @@
+body {
+    background-color: #091531;
+    color: #53b4f2;
+    padding: 15px;
+    width: 300px;
+  }
+  
+  .logo {
+    width: 150px;  /* adjust size as needed */
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
