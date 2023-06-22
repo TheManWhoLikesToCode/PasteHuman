@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "TypeEmulate",
-  "description": "This extension emulates typing in textboxes.",
+  "name": "PasteHuman",
+  "description": "Transforming plain text into human-like typing. This extension emulates typing in textboxes.",
   "version": "1.0",
   "permissions": ["contextMenus", "activeTab", "clipboardRead"],
   "background": {

@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Typing Emulator</title>
+  <title>PasteHuman</title>
   <link rel="stylesheet" type="text/css">
   <style>
     body {
-      background-color: #000000;
-      color: #ffffff;
+      background-color: #EFEAE4;
+      color: #000000;
       padding: 15px;
       width: 300px;
     }
-  
+
     .logo {
-      width: 150px;
+      width: 300px;
       display: block;
       margin: 0 auto 20px;
     }
 
+    h1,
     button {
-      background-color: #53b4f2;
-      border: none;
-      color: #000000;
-      padding: 15px 32px;
       text-align: center;
+      width: 100%;
+    }
+
+    button {
+      background-color: #000000;
+      border: none;
+      color: #ffffff;
+      padding: 15px 32px;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-      margin: 4px 2px;
+      margin: 4px auto;
       cursor: pointer;
     }
   </style>
 </head>
+
 <body>
-  <img src="TypeEmulate_Logo.png" alt="Logo" class="logo">
-  <h1>Typing Emulator</h1>
+  <img src="PasteHuman_Logo.jpg" alt="Logo" class="logo">
   <p>Right click on a textbox and select "Emulate typing" to paste clipboard contents as if typing.</p>
   <p>Alternatively, you can click the "Start typing" button and then click on the textbox within 5 seconds.</p>
   <button id="startTyping">Start typing</button>
   <script src="popup.js"></script>
 </body>
+
 </html>

@@ -2,7 +2,7 @@ let currentTypingSession = null;
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action === "emulateTyping") {
-    console.log("Action received: emulateTyping");
+    console.log("PasteHuman Action received: emulateTyping");
     currentTypingSession = Math.random().toString(); // Create a new unique typing session identifier
     navigator.clipboard
       .readText()
@@ -60,4 +60,3 @@ function emulateTyping(text, session, delayedStart) {
     startTyping();
   }
 }
-``
