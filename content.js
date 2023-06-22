@@ -60,3 +60,4 @@ function emulateTyping(text, session, delayedStart) {
     startTyping();
   }
 }
+``
