@@ -1,7 +1,7 @@
 Transforming plain text into human-like typing
 
 <p align="center">
-  <img src="PasteHuman_Logo.png" alt="Logo">
+  <img src="PasteHuman_Logo.jpg" alt="Logo">
 </p>
 
 <p align="center">
