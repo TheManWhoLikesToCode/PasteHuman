@@ -4,19 +4,17 @@ on: [push, pull_request]
 
 jobs:  
   build:  
-
-  runs-on: ubuntu-latest  
-
-  steps:  
-  - uses: actions/checkout@v2  
-  - name: Setup Node.js  
-    uses: actions/setup-node@v2  
-    with:  
-      node-version: '14'  
-  - name: Install Dependencies  
-    run: |  
-      npm install -g prettier eslint
-  - name: Check Code Formatting  
-    run: |  
-      npx prettier --check .
-      npx eslint --ext .js,.html .
+    runs-on: ubuntu-latest  
+    steps:  
+    - uses: actions/checkout@v2  
+    - name: Setup Node.js  
+      uses: actions/setup-node@v2  
+      with:  
+        node-version: '14'  
+    - name: Install Dependencies  
+      run: |  
+        npm install -g prettier eslint
+    - name: Check Code Formatting  
+      run: |  
+        npx prettier --check .
+        npx eslint --ext .js,.html .
