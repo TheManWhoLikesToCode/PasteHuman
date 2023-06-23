@@ -35,7 +35,7 @@ Currently, this extension needs to be installed manually.
 - `background.js`: This JavaScript file listens for the installation of the extension and creates context menu items (right-click menu items) for "Emulate typing" and "Stop typing". It also listens for context menu clicks and sends a message to the content script to perform the appropriate action.
 - `content.js`: This is the content script. It listens for messages from `background.js` and performs the typing emulation. It uses a unique identifier for each typing session and uses timeouts to emulate the typing delay.
 - `manifest.json`: This JSON file contains metadata about the extension such as its name, description, version, permissions, icons, and background scripts.
-- `PasteHuman_Logo.png`: This is the logo image for the extension, displayed in the popup UI.
+- `PasteHuman_Logo.jpeg`: This is the logo image for the extension, displayed in the popup UI.
 
 ## 🤝 Contribution
 
