@@ -50,6 +50,5 @@ Please add a license file in the root directory of the project if you have one. 
 Please add contact information if you wish to provide a way for users to get in touch with you regarding the extension.
 
 ## Description
-
 PasteHuman is a Chrome extension enabling users to paste text as if they're typing it out. It features an intuitive process, allowing the emulation of realistic human typing and giving users the ability to halt the typing simulation.
 
