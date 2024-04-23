@@ -13,6 +13,8 @@
 - 📝 Emulate typing by pasting clipboard contents into text input fields.
 - ⏹️ Ability to stop the emulation.
 - 🕹️ Realistic typing emulation with random intervals between key presses.
+- ⏳ Settings to adjust keystroke speed
+- ⌨️⌨️ Hotkey support: Ctrl/Command+Shift+Y (default)
 
 ## 🛠️ Installation
 

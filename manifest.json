@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "PasteHuman",
   "description": "Transforming plain text into human-like typing. This extension emulates typing in textboxes.",
-  "version": "1.0",
-  "permissions": ["contextMenus", "activeTab", "clipboardRead"],
+  "version": "1.1",
+  "permissions": ["contextMenus", "activeTab", "clipboardRead", "storage"],
   "background": {
     "service_worker": "background.js"
   },
@@ -13,6 +13,22 @@
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "emulateTyping": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Emulate typing"
+    },
+    "stopTyping": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Stop typing"
     }
   },
   "icons": {
@@ -25,5 +41,6 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "options_page": "options.html"
 }
