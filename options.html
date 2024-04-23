@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PasteHuman Settings</title>
+    <style>
+        body {
+            background-color: #EFEAE4;
+            color: #000000;
+            padding: 15px;
+            width: 300px;
+        }
+        h1, label, input[type="submit"] {
+            text-align: center;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #000000;
+            border: none;
+            color: #ffffff;
+            padding: 15px 32px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px auto;
+            cursor: pointer;
+        }
+    </style>
+    <script src="options.js"></script>
+</head>
+<body>
+    <h1>PasteHuman Settings</h1>
+    <form id="settingsForm">
+        <label for="minDelay">Min Delay:</label><br>
+        <input type="number" id="minDelay" name="minDelay"><br>
+        <label for="maxDelay">Max Delay:</label><br>
+        <input type="number" id="maxDelay" name="maxDelay"><br>
+        <label for="extraDelayChance">Extra Delay Chance:</label><br>
+        <input type="number" id="extraDelayChance" name="extraDelayChance" step="0.01" min="0" max="1"><br>
+        <label for="extraDelayMin">Extra Delay Min:</label><br>
+        <input type="number" id="extraDelayMin" name="extraDelayMin"><br>
+        <label for="extraDelayMax">Extra Delay Max:</label><br>
+        <input type="number" id="extraDelayMax" name="extraDelayMax"><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
